@@ -3,11 +3,11 @@ const mongoose = require("mongoose")
 const mobileSchema = new mongoose.Schema({
     mobilename : {type:String,required:true},
     image : {type:String,required:true},
-    price : {type:Number,required:true},
+    price : {type:String,required:true},
     desc : {type:String,reqired:true},
     rating : {
-        rate:{type:Number,reqired:true},
-        count:{type:Number,reqired:true}
+        rate:{type:String,reqired:true},
+        count:{type:String,reqired:true}
     }
 })
 
