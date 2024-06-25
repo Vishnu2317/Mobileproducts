@@ -23,10 +23,10 @@ mobilerouter.get('/products',async(req,res)=>{
     }
 })
 
-mobilerouter.get('/products',async(req,res)=>{
+mobilerouter.get('/products/:id',async(req,res)=>{
     const id = req.params.id
     try {
-       const selectedproducts = await mobileModel.findById()
+       const selectedproducts = await mobileModel.findById(id)
        res.send(selectedproducts)
     } catch (error) {
         res.send({message:"failed getting product"})
